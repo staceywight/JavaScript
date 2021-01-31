@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Chapter 3, Example 4</title>
+</head>
+<body>
+	<script>
+		var degFahren = [212, 32, -459.15]; // declare and initialize variable with array of 3 values
+		var degCent = []; // declare variable as empty string
+		var loopCounter; // keep track of array index during looping
+		
+		//first for loop - test condition is checked - if true, loop excutes for first time.  Code keeps executing until it becomes false...then first statement after the closing curly brace will be executed.
+		for (loopCounter = 0; loopCounter <=2; loopCounter++)  {
+			degCent [loopCounter] = 5/9 * (degFahren[loopCounter] - 32);
+		}
+		
+		// second for loop - counting down from 2 to 0.
+		for (loopCounter = 2; loopCounter >=0; loopCounter--)  {
+			document.write("Value " + loopCounter +
+						   " was " + degFahren[loopCounter] +
+						   " degrees Fahrenheit");
+						   
+			document.write(" which is " + degCent[loopCounter] + 
+						   " degrees centigrade<br />");
+		}
+	</script>
+</body>
+</html>

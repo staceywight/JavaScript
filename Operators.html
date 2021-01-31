@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>JavaScript Operators</title>
+	<script type="text/javascript">
+	
+		var myNum1 = prompt("Enter number myNum1: ", 2);
+		var myNum2 = prompt("Enter number myNum2: ", 3);
+		// !! Note that the prompt function returns a string; myNum1 myNum2 are strings
+		
+		// String Concatenation operator
+		document.write("</br><li>Concatenation operator");
+		document.write("</br>myNum1 = " + myNum1 + " is a " + typeof(myNum1));
+		document.write("</br>myNum2 = " + myNum2 + " is a " + typeof(myNum2));
+		stringConcatenation = myNum1 + myNum2;
+		document.write("</br>myNum1 + myNum2 = " + stringConcatenation + " because myNum1 , myNum2 are strings and + operator is concatenation operator" );
+		
+		// Arithmetic operators
+		document.write("</br></br><li>Arithmetic operators");
+		document.write("</br>myNum1 = " + myNum1 + " is a " + typeof(parseFloat(myNum1)));
+		document.write("</br>myNum1 = " + myNum2 + " is a " + typeof(parseFloat(myNum2)));
+		arithmeticAdd = parseFloat(myNum1) + parseFloat(myNum2);
+		document.write("</br>myNum1 + myNum2 = " + arithmeticAdd + " because myNum1 , myNum2 are numbers and + operator is arithmetic addition");
+		
+		arithmeticSub = parseInt(myNum1) - parseFloat(myNum2);
+		document.write("</br>myNum1 - myNum2 = " + arithmeticSub + " because myNum1 , myNum2 are numbers and - operator is subtraction");
+		
+		// Assignment operators
+		document.write("</br></br><li>Assignments operators");
+		document.write("</br>myNum1 = " + myNum1 + " is a " + typeof(myNum1));
+		myNum1 += myNum1;
+		document.write("</br>myNum1 += myNum1 is equivalent to myNum1 = myNum1 + myNum1 and returns " + myNum1);
+		document.write("<br> In the above example  the JavaScript interprets + as a concatenation operator");
+		
+		document.write("</br><br>myNum2 = " + myNum2 + " is a " + typeof(myNum2));
+		myNum2 -= myNum2;
+		document.write("<br>myNum2 -= myNum2 is equivalent to myNum2 = myNum2 - myNum2 and returns " + myNum2);
+		document.write("<br> In the above example the JavaScript is forced to interpret myNum2 as a number because - is an arithmetic operator");
+		
+		//Comparison & Conditional operators
+		document.write("</br></br><li>Comparison & Conditional operators");
+		document.write("</br>myNum1 = " + myNum1 + " is a " + typeof(myNum1));
+		myValueEquality = (myNum == "22")?"TRUE":"FALSE";
+		document.write("</br>Is myNum1 equal in VALUE to \"22\" (myNum1 == \"22\")? " + myValueEquality );
+		
+		myValueDataTypeEquality = (myNum1 === 22)?"TRUE":"FALSE";
+		document.write("</br>Is myNum1 equal in <b>VALUE and DATATYPE</b> to integer 22 (myNum1 === 22)? " + myValueDataTypeEquality );
+		
+		// Logical Operators
+		document.write("</br></br><li>Logical operators");
+		myNum3=39;
+		myNum4=50;
+		document.write("</br>myNum3 = " + myNum3 + " is a " + typeof(myNum3));
+		document.write("</br>myNum4 = " + myNum4 + " is a " + typeof(myNum4));
+		myAndOperator = (myNum3 < 40 && myNum4 > 40);
+		document.write("</br>The(myNum3 < 40 AND myNum4 > 40) expression is " + myAndOperator);
+		myOrOperator = (myNum3 < 40 && myNum4 < 40);
+		document.write("</br>The(myNum3 < 40 OR myNum4 < 40) expression is " + myOrOperator);
+	</script>
+<body></body>
+</head>
+</html>	
+	
+		

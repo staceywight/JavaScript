@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>T2 Stacey Wight</title>
+</head>
+<body>
+<form action="" name="form1">
+    Please enter the following details:	
+    <p>
+        Name:
+        <input type="text" name="txtName" />
+    </p>
+    <p>
+        Age:
+        <input type="text" name="txtAge" size="3" maxlength="3" />
+    </p>
+	<p>
+        Address:
+        <input type="text" name="txtAddress" size="50" maxlength="50" />
+    </p>
+	<p>
+        Phone:
+        <input type="text" name="txtPhone" size="10" maxlength="10" />
+    </p>
+	
+	<p>Tick all of the components you want included on your computer:</p>
+        <p>
+            <label for="chkDVD">DVD-ROM</label>
+            <input type="checkbox" id="chkDVD" name="chkDVD" value="DVD-ROM" />
+        </p>
+        <p>
+            <label for="chkBluRay">Blu-ray</label>
+            <input type="checkbox" id="chkBluRay" name="chkBluRay" value="Blu-ray" />
+        </p>
+		
+		<p>
+            <label for="chkUSB">USB 3.0</label>
+            <input type="checkbox" id="chkUSB" name="chkUSB" value="USB" />
+        </p>
+
+        <p>
+            Select the processor speed you require
+        </p>
+        <p>
+            <input type="radio" name="radCpuSpeed" checked="checked"
+                   value="3.2 ghz" />
+            <label>3.2 GHz</label>
+
+            <input type="radio" name="radCpuSpeed" value="3.7 ghz" />
+            <label>3.7 GHz</label>
+
+            <input type="radio" name="radCpuSpeed" value="4.0 ghz" />
+            <label>4.0 GHz</label>
+			
+			<input type="radio" name="radCpuSpeed" value="5.2 ghz" />
+            <label>5.2 GHz</label>
+        </p>
+		
+	<p>
+        <input type="button" value="Check details" name="btnCheckForm">
+    </p>
+</form>
+
+    <script>
+        var myForm = document.form1;
+
+        function btnCheckFormClick(e) {
+            var txtName = myForm.txtName;
+            var txtAge = myForm.txtAge;
+			var txtAddress = myForm.txtAddress;
+			var txtPhone = myForm.txtPhone;
+
+            if (txtAge.value == "" || txtName.value == "" || txtAddress.value == "" || txtPhone.value == "") {
+                alert("Please complete all of the form");
+
+                if (txtName.value == "") {
+                    txtName.focus();
+                } else {
+                    txtAge.focus();
+                }
+            } else {
+                alert("Thanks for completing the form " + txtName.value);
+            }
+        }
+
+        function txtAgeBlur(e) {
+            var target = e.target;
+
+            if (isNaN(target.value)) {
+                alert("Please enter a valid age");
+                target.focus();
+                target.select();
+            }
+        }
+		
+		function txtPhoneBlur(e) {
+            var target = e.target;
+
+            if (isNaN(target.value)) {
+                alert("Please enter a valid phone number with no dashes");
+                target.focus();
+                target.select();
+            }
+        }
+
+        function txtNameChange(e) {
+            alert("Hi " + e.target.value);
+        }
+		
+		function getSelectedSpeedValue() {
+            var radios = myForm.radCpuSpeed;
+
+            for (var index = 0; index < radios.length; index++) {
+                if (radios[index].checked) {
+                    return radios[index].value;
+                }
+            }
+
+            return "";
+        }
+
+        function findIndexOfSpeed(radio) {
+            var radios = myForm.radCpuSpeed;
+
+            for (var index = 0; index < radios.length; index++) {
+                if (radios[index] == radio) {
+                    return index;
+                }
+            }
+
+            return -1;
+        }
+
+        function radCpuSpeedClick(e) {
+            var radIndex = findIndexOfSpeed(e.target);
+
+            if (radIndex == 1) {
+                e.preventDefault();
+                alert("Sorry that processor speed is currently unavailable");
+
+                // to fix an issue with IE
+                myForm.radCpuSpeed[0].checked = true;
+            }
+        }
+
+        function btnCheckFormClick() {
+            var numberOfControls = myForm.length;
+            var compSpec = "Your chosen processor speed is ";
+            compSpec = compSpec + getSelectedSpeedValue();
+            compSpec = compSpec + "\nWith the following additional components:\n";
+
+            for (var index = 0; index < numberOfControls; index++) {
+                var element = myForm[index];
+                if (element.type == "checkbox") {
+                    if (element.checked) {
+                        compSpec = compSpec + element.value + "\n";
+                    }
+                }
+            }
+
+            alert(compSpec);
+        }
+
+        for (var index = 0; index < myForm.radCpuSpeed.length; index++) {
+            myForm.radCpuSpeed[index].addEventListener("click", radCpuSpeedClick);
+        }
+
+		myForm.txtName.addEventListener("change", txtNameChange);
+        myForm.txtAge.addEventListener("blur", txtAgeBlur);
+		myForm.txtPhone.addEventListener("blur", txtPhoneBlur);
+        myForm.btnCheckForm.addEventListener("click", btnCheckFormClick);
+    </script>
+</body>
+</html>

@@ -1,0 +1,704 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Final Project - JavaScript - Stacey Wight</title>
+<style type="text/css">
+body,td,th {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+a {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+	h2  {background-color: blanchedalmond}
+h3 {
+	font-size: 20px;
+	color: #EB5E30; 
+	text-transform: uppercase;
+}
+h4  {color: #D11E88; font-size: 18px;}
+table  {border: 5px dashed #21B7E5;}
+</style>
+</head>
+
+<body>
+<h1>JavaScript CheatSheet</h1>
+<p><strong>Stacey Wight - April 17, 2017</strong></p>
+<p>++++++++++++++++++++++++++++++++++++++++</p>
+<h2>1. JavaScript Language Fundamentals</h2>
+<h3>1.1 Variables</h3>
+<p>JavaScript variables are containers for storing data values.</p>
+<h4>General Syntax</h4>
+<ul>
+  <li>var myFirstVariable // declares a variable</li>
+  <li>myFirstVariable = value // assigns a value to the variable</li>
+  <li>OR........</li>
+  <li>var myFirstVariable = value // declares a variable and assigns a value all in one step</li>
+</ul>
+<h4>Methods</h4>
+<p>All JavaScript variables must be identified with unique names.<br>
+These unique names are called identifiers.<br>
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).<br>
+The general rules for constructing names for variables (unique identifiers) are:</p>
+<ul>
+  <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+  <li>Names must begin with a letter</li>
+  <li>Names are case sensitive (y and Y are different variables)</li>
+  <li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+</ul>
+<p> var x; // declares a variable<br>
+var y = 6; // assigns a value to the variable<br>
+var myName = &quot;John Doe&quot;;
+// declares a variable and assigns a value all in one step</p>
+<h4>Properties</h4>
+<ul>
+  <li>myVar1; <strong>undefined</strong> data type</li>
+  <li>var myVar2 = &quot;Welcome&quot;; <strong>string</strong> data type</li>
+  <li>var myVar3 = 5; <strong>number</strong> data type</li>
+  <li>var myVar4 = &quot;5&quot;; <strong>string </strong>data type</li>
+  <li>var myVar5 = true; <strong>boolean</strong> data type</li>
+  <li>var myVar6 = null; <strong>object</strong> data type</li>
+</ul>
+<h4>Example</h4>
+<p><a href="Variables.html" target="_blank">Working code for Variables</a></p>
+<h3>&nbsp;</h3>
+<h3>1.2 Operators</h3>
+<p>Can be used to manipulate data values.</p>
+<p>Operator = is a symbol used to act upon an item, an expression or a variable<br>
+Operand = is a variable that operators act upon</p>
+<h4>General Syntax</h4>
+<p>var myVariable;<br>
+myVariable = 1 + 1 * 2; // this variable holds the value of 3</p>
+<h4>Methods</h4>
+<p>y=4; x=y+2; =&gt; x=6 // Arithmetic</p>
+<p>y=3 ; x=y =&gt; x=3 // Assignment</p>
+<p>x=3; x==6 is false; x==3 is true // Comparison</p>
+<p>x = 4 ; y = 3 // Logical<br>
+  (x &lt; 5 &amp;&amp; y &lt; 5) is true<br>
+(x &lt; 5 &amp;&amp; y &gt; 10) is false</p>
+<p>x = 4 ; y = 3 // Conditional<br>
+result = (x == y) ? c : d =&gt; result = d</p>
+<h4>Properties</h4>
+<p>There are different types of operators:<br>
+</p>
+<ol>
+  <li>arithmetic operators - are used to perform arithmetic between variables and values.</li>
+  <li>assignment operators - are used to assign values to JavaScript variables</li>
+  <li>comparison operators - are used in logical statements to determine equality or difference between variables or values</li>
+  <li>logical operators - are used to determine the logic between variables or values</li>
+  <li>conditional operators - assign a value to a variable based on some condition</li>
+</ol>
+<h4>Example</h4>
+<p><a href="Operators.html" target="_blank">Working code for Operators</a></p>
+<p>&nbsp;</p>
+<h3>1.3 Conditional Statements</h3>
+<h4>General Syntax</h4>
+<p><strong>if Statement Syntax:</strong><br>
+  <strong>if (expression) {statements}</strong><br>
+The JavaScript evaluates the expression and automatically converts the result of the expression into a Boolean (true or false). If the condition is true, the statement is executed.</p>
+<p><strong>if …. else Statement Syntax:<br>
+  if (expression) statement1 else statement2</strong><br>
+The JavaScript evaluates the expression and automatically converts the result of the expression into a Boolean. If the condition is true, statement1 is executed. If the condition is false, statement2 is executed.</p>
+<p><strong>if …. else if …. else Statement Syntax:<br>
+  if (condition1) statement1 else if (condition2) statement2 else statement3</strong><br>
+The JavaScript evaluates the expression and automatically converts the result of the expressions into a Boolean. If condition1 is true, statement1 is executed. If condition2 is true, statement2 is executed. If neither condition1 and condition2 are true, statement3 is executed.</p>
+<p><strong>switch case Statement Syntax:</strong><br>
+  <strong>switch (expression) {<br>
+  case value: statement<br>
+  break;<br>
+  case value: statement<br>
+  break;<br>
+  case value: statement<br>
+  break;<br>
+  case value: statement<br>
+  break;<br>
+  default: statement<br>
+}</strong></p>
+<h4>Methods</h4>
+<p>If time is less than 10:00, create a "Good morning" greeting, if not, but time is less than 20:00, create a "Good day" greeting, otherwise a "Good evening":</p>
+<p>if (time &lt; 10) {<br>
+greeting = "Good morning";<br>
+} else if (time &lt; 20) {<br>
+greeting = "Good day";<br>
+} else {<br>
+greeting = "Good evening";<br>
+}</p>
+<h4>Example</h4>
+<p><a href="CondStatements.html" target="_blank">Working code for Conditional Statements</a></p>
+<p>&nbsp;</p>
+<h3>1.4 Loops</h3>
+<p>Program loops are sets of commands that are executed repeatedly until a stopping condition has been met.</p>
+<p>Any loop has three statements:<br>
+  1. INITIAL state<br>
+  2. CONDITION<br>
+3. INCREMENT</p>
+<h4>General Syntax</h4>
+<p>The for loop has the following syntax:</p>
+<p><strong>for (statement 1; statement 2; statement 3) {<br>
+code block to be executed<br>
+}</strong></p>
+<p>Statement 1 is executed before the loop (the code block) starts.<br>
+Statement 2 defines the condition for running the loop (the code block).<br>
+Statement 3 is executed each time after the loop (the code block) has been executed.</p>
+<p>The while loop loops through a block of code as long as a specified condition is true. Syntax:</p>
+<p><strong>while (condition) {<br>
+code block to be executed<br>
+}</strong></p>
+<h4>Methods</h4>
+<p>for (i = 0; i &lt; 5; i++) {<br>
+      text += "The number is " + i + "&lt;br&gt;";<br>
+}</p>
+<p>From the example above, you can read:</p>
+<p>Statement 1 sets a variable before the loop starts (var i = 0).<br>
+Statement 2 defines the condition for the loop to run (i must be less than 5).<br>
+Statement 3 increases a value (i++) each time the code block in the loop has been executed.</p>
+<p>In the following &quot;while&quot; example, the code in the loop will run, over and over again, as long as a variable (i) is less than 10:</p>
+<p>while (i &lt; 10) {<br>
+text += "The number is " + i;<br>
+i++;<br>
+}</p>
+<h4>Example</h4>
+<p><a href="Loops.html" target="_blank">Working code for Loops</a></p>
+<p>&nbsp;</p>
+<h3>1.5 Functions</h3>
+<p>A JavaScript function is a block of code designed to perform a particular task.<br>
+A JavaScript function is executed when "something" invokes it (calls it).</p>
+<h4>General Syntax</h4>
+<p>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</p>
+<p>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).</p>
+<p>The parentheses may include parameter names separated by commas:<br>
+  (parameter1, parameter2, ...)</p>
+<p>The code to be executed, by the function, is placed inside curly brackets: {}</p>
+<p><strong>function name(parameter1, parameter2, parameter3) {<br>
+code to be executed<br>
+}</strong></p>
+<p>Function parameters are the names listed in the function definition.<br>
+Function arguments are the real values received by the function when it is invoked.<br>
+Inside the function, the arguments (the parameters) behave as local variables.</p>
+<h4>Methods</h4>
+<p>Convert Fahrenheit to Celsius (answer is 25):</p>
+<p><strong>function toCelsius(fahrenheit) {<br>
+return (5/9) * (fahrenheit-32);<br>
+}<br>
+document.getElementById("demo").innerHTML = toCelsius(77);</strong></p>
+<h4>Example</h4>
+<p><a href="Functions.html" target="_blank">Working code for Functions</a></p>
+<p>&nbsp;</p>
+<h3>1.6 JS Objects - General Overview</h3>
+<p>JavaScript Objects are a collection of properties, methods and constructor(s) grouped together under one object name.</p>
+<ul>
+  <li>Properties are the values associated with an object. </li>
+  <li>Methods are the actions that can be performed on the object. </li>
+  <li>Constructors are used to create an object</li>
+</ul>
+<p>There are three types of objects that can be used in JavaScript:</p>
+<ul>
+  <li>native objects (built-in objects) : objects supplied by JavaScript<br>
+   e.g Array, Date, String, Math etc</li>
+  <li>host objects: objects supplied by the browser environment<br>
+   e.g window, document, forms etc.</li>
+  <li>user-defined objects (custom objects): objects defined by programmer<br>
+  </li>
+</ul>
+<p>The built-in objects have pre-defined methods and properties.<br>
+For custom objects, a developer has to define the methods and the properties of these objects.</p>
+<h4>General Syntax</h4>
+<p><strong>Creating an object</strong><br>
+  1. Syntax 1: using keyword new and a constructor function:<br>
+  e.g. myObj = new Date(2012);<br>
+  // syntax to create object myObj as a Date Object using new keyword and Date(year) constructor<br>
+</p>
+<p>2. Syntax 2: using object literals syntax<br>
+  e.g. var myObj = {property1: “wild”, property2: “flower” , property3: “red”};<br>
+  e.g. var myArray ={“apple”, “banana”, “mango”, ”orange” };<br>
+</p>
+<p><strong>Accessing Object Properties</strong><br>
+  Syntax: <strong>objectName.propertyName = value</strong><br>
+  e.g myObj.size=3; myObj.color=red;<br>
+</p>
+<p><strong>Accessing Object Methods</strong><br>
+  Syntax: <strong>objectName.methodName</strong><br>
+e.g myObj.setYear(2012); myObj.getYear();</p>
+<h4>Methods</h4>
+<p>Methods are actions that can be performed on objects. Methods are stored in properties as function definitions.</p>
+<table width="551">
+  <tbody>
+    <tr>
+      <th width="125" align="left">Property</th>
+      <th width="265" align="left">Property Value</th>
+    </tr>
+    <tr>
+      <td>firstName</td>
+      <td>John</td>
+    </tr>
+    <tr>
+      <td>lastName</td>
+      <td>Doe</td>
+    </tr>
+    <tr>
+      <td>age</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>eyeColor</td>
+      <td>blue</td>
+    </tr>
+    <tr>
+      <td>fullName</td>
+      <td>function() {return this.firstName + " " + this.lastName;}</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Properties</h4>
+<p>The name:values pairs (in JavaScript objects) are called properties.</p>
+<p>var person = {firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue"};</p>
+<table>
+  <tbody>
+    <tr>
+      <th width="125" align="left">Property</th>
+      <th width="145" align="left">Property Value</th>
+    </tr>
+    <tr>
+      <td>firstName</td>
+      <td>John</td>
+    </tr>
+    <tr>
+      <td>lastName</td>
+      <td>Doe</td>
+    </tr>
+    <tr>
+      <td>age</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>eyeColor</td>
+      <td>blue</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<p>&nbsp;</p>
+<h3>1.7 JS Built-in Objects (List of 5)</h3>
+<table width="500">
+  <tbody>
+    <tr>
+      <th width="125" align="left">Method</th>
+      <th width="227" align="left">Description</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_getdate.asp">getDate()</a></td>
+      <td>Returns the day of the month (from 1-31)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_getday.asp">getDay()</a></td>
+      <td>Returns the day of the week (from 0-6)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_getfullyear.asp">getFullYear()</a></td>
+      <td>Returns the year</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_gethours.asp">getHours()</a></td>
+      <td>Returns the hour (from 0-23)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_getmilliseconds.asp">getMilliseconds()</a></td>
+      <td>Returns the milliseconds (from 0-999)</td>
+    </tr>
+  </tbody>
+</table>
+<h4>General Syntax</h4>
+<p>myDate1 = new Date(2012); myDate1.getYear(); this.getYear();<br>
+// In this example, in getYear(), the variable this would refer to myDate1</p>
+<h4>Methods</h4>
+<table width="575">
+  <tbody>
+    <tr>
+      <th width="95" align="left">Property</th>
+      <th width="386" align="left">Description</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_constructor_date.asp">constructor</a></td>
+      <td>Returns the function that created the Date object's prototype</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_prototype_date.asp">prototype</a></td>
+      <td>Allows you to add properties and methods to an object</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Example</h4>
+<p><a href="BuiltInObjects.html" target="_blank">Working code for Built-in Objects</a></p>
+<p>&nbsp;</p>
+<h3>1.8 Array Object</h3>
+<p>The Array object is used to store multiple values in a single variable. Each element of the array is identified by an index.</p>
+<p>afruits[0] = “apple”</p>
+<p>In the example above, afruits is the <strong>array name</strong>, 0 is the<strong> array index</strong> and apple is the <strong>element value</strong>.</p>
+<h4>General Syntax</h4>
+<p><strong>Option 1:</strong><br>
+  Create an array using the Array constructor with or without the new operator:<br>
+</p>
+<ul>
+  <li>var aMyArray = new Array();</li>
+  <li>var aMyArray = Array();</li>
+</ul>
+<p><strong>Option 2:</strong><br>
+  If you know the number of elements that will be in the array, pass the count on the array constructor:<br>
+</p>
+<ul>
+  <li> var aMyArray = new Array(4);</li>
+  <li>var aMyArray = Array(5);</li>
+</ul>
+<p><strong>Option 3:</strong><br>
+  Create an array by passing the element values in the array constructor:<br>
+</p>
+<ul>
+  <li>var aMyArray = new Array(“apple”, 1, true, 5.6, “watermelon” )</li>
+  <li>var aMyArray = Array(“apple”, 1, true, 5.6, “watermelon” )</li>
+</ul>
+<p><strong>Using the Array Literal Notation</strong>:</p>
+<ul>
+  <li>var aMyArray = [“apple”, 1, true, 5.6, “watermelon” ];</li>
+  <li>var aMyArray = [] // creates an empty array; elements can be added later</li>
+</ul>
+<h4>Methods</h4>
+<ol>
+  <li><strong>Conversion Methods: </strong>conversion of array object to string</li>
+  <li><strong>Stack Methods: </strong>methods that allows an array to behave like a LAST-IN-FIRST-OUT structure, the most recent added element is the first one removed</li>
+  <li><strong>Queue Methods:</strong> methods that allow an array to behave like a queue FIRST-IN-FIRST-OUT structure. A queue adds element to the end of the array and retrieve the first item in the array</li>
+  <li><strong>Reordering Methods</strong></li>
+  <li><strong>Manipulation Methods</strong></li>
+</ol>
+<h4>Properties</h4>
+<table width="575">
+  <tbody>
+    <tr>
+      <th width="109" align="left">Property</th>
+      <th width="446" align="left">Description</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_constructor_array.asp">constructor</a></td>
+      <td>Returns the function that created the Array object's prototype</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_length_array.asp">length</a></td>
+      <td>Sets or returns the number of elements in an array</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_prototype_array.asp">prototype</a></td>
+      <td>Allows you to add properties and methods to an Array object</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Length Property:<br>
+</strong>var aMyArray = new Array(“apple”, 1, true, 5.6, “watermelon” );<br>
+alert(aMyArray.length); // will return 5 which means that the array has 5 elements<br>
+The last element of the array is at position length-1 which means that the next available slot is at position length.</p>
+<h4>Example</h4>
+<p><a href="ArrayObject.html" target="_blank">Working code for Array Object</a></p>
+<p>&nbsp;</p>
+<h3>1.9 String Object</h3>
+<p>The String object is used to manipulate a stored piece of text.<br>
+  String objects are created with new String().<br>
+</p>
+<h4>General Syntax</h4>
+<p>using new keyword and String() constructor <br>
+var txt = new String(&quot;string&quot;); </p>
+<p>or more simply: <br>
+var txt = &quot;string&quot;;</p>
+<h4>Methods</h4>
+<table>
+  <tbody>
+    <tr>
+      <th width="166" align="left">Method</th>
+      <th width="730" align="left">Description</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_charat.asp">charAt()</a></td>
+      <td>Returns the character at the specified index (position)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_charcodeat.asp">charCodeAt()</a></td>
+      <td>Returns the Unicode of the character at the specified index</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_concat_string.asp">concat()</a></td>
+      <td>Joins two or more strings, and returns a new joined strings</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_endswith.asp">endsWith()</a></td>
+      <td>Checks whether a string ends with specified string/characters</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_fromcharcode.asp">fromCharCode()</a></td>
+      <td>Converts Unicode values to characters</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_includes.asp">includes()</a></td>
+      <td>Checks whether a string contains the specified string/characters</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_indexof.asp">indexOf()</a></td>
+      <td>Returns the position of the first found occurrence of a specified value in a string</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_lastindexof.asp">lastIndexOf()</a></td>
+      <td>Returns the position of the last found occurrence of a specified value in a string</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_localecompare.asp">localeCompare()</a></td>
+      <td>Compares two strings in the current locale</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_match.asp">match()</a></td>
+      <td>Searches a string for a match against a regular expression, and returns the matches</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_repeat.asp">repeat()</a></td>
+      <td>Returns a new string with a specified number of copies of an existing string</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_replace.asp">replace()</a></td>
+      <td>Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_search.asp">search()</a></td>
+      <td>Searches a string for a specified value, or regular expression, and returns the position of the match</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_slice_string.asp">slice()</a></td>
+      <td>Extracts a part of a string and returns a new string</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_split.asp">split()</a></td>
+      <td>Splits a string into an array of substrings</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_startswith.asp">startsWith()</a></td>
+      <td>Checks whether a string begins with specified characters</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_substr.asp">substr()</a></td>
+      <td>Extracts the characters from a string, beginning at a specified start position, and through the specified number of character</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_substring.asp">substring()</a></td>
+      <td>Extracts the characters from a string, between two specified indices</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_tolocalelowercase.asp">toLocaleLowerCase()</a></td>
+      <td>Converts a string to lowercase letters, according to the host's locale</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_tolocaleuppercase.asp">toLocaleUpperCase()</a></td>
+      <td>Converts a string to uppercase letters, according to the host's locale</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_tolowercase.asp">toLowerCase()</a></td>
+      <td>Converts a string to lowercase letters</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_tostring_string.asp">toString()</a></td>
+      <td>Returns the value of a String object</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_touppercase.asp">toUpperCase()</a></td>
+      <td>Converts a string to uppercase letters</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_trim_string.asp">trim()</a></td>
+      <td>Removes whitespace from both ends of a string</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_valueof_string.asp">valueOf()</a></td>
+      <td>Returns the primitive value of a String object</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Properties</h4>
+<table width="575">
+  <tbody>
+    <tr>
+      <th width="144" align="left">Property</th>
+      <th width="411" align="left">Description</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_constructor_string.asp">constructor</a></td>
+      <td>Returns the string's constructor function</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_length_string.asp">length</a></td>
+      <td>Returns the length of a string</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/jsref_prototype_string.asp">prototype</a></td>
+      <td>Allows you to add properties and methods to an object</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Example</h4>
+<p><a href="StringObject.html" target="_blank">Working code of String Objects</a></p>
+<p>&nbsp;</p>
+<h2>2. JavaScript - Web Browser - Web Document Interaction</h2>
+<h3>2.1 Browser Objects</h3>
+<p>OBJECTS that expose the BROWSER functionality to the JavaScript.</p>
+<p>As the top level object in the BOM hierarchy, every browser window and frame has a corresponding Window object, created automatically with every instance of a &lt;BODY&gt; or &lt;FRAMESET&gt; tag.</p>
+<p>The window object represents an open window in a browser.<br>
+</p>
+<p>List of the window object properties and methods: <a href="http://www.w3schools.com/jsref/obj_window.asp" target="_blank">http://www.w3schools.com/jsref/obj_window.asp</a><br>
+</p>
+<p><strong>Examples for the window object :</strong><br>
+</p>
+<ul>
+  <li><strong>Closed property:</strong> <a href="http://www.w3schools.com/jsref/prop_win_closed.asp" target="_blank">http://www.w3schools.com/jsref/prop_win_closed.asp</a></li>
+  <li><strong>Status property:</strong> <a href="http://www.w3schools.com/jsref/prop_win_status.asp" target="_blank">http://www.w3schools.com/jsref/prop_win_status.asp</a></li>
+  <li><strong>Parent property: </strong><a href="http://www.w3schools.com/jsref/prop_win_parent.asp" target="_blank">http://www.w3schools.com/jsref/prop_win_parent.asp</a></li>
+  <li><strong>InnerHeight property:</strong> <a href="http://www.w3schools.com/jsref/prop_win_innerheight.asp" target="_blank">http://www.w3schools.com/jsref/prop_win_innerheight.asp</a></li>
+</ul>
+<p>Child objects of the window object are actually PROPERTIES of the window object:<br>
+</p>
+<ul>
+  <li><a href="https://www.w3schools.com/jsref/obj_screen.asp" target="_blank">Screen object</a></li>
+  <li><a href="https://www.w3schools.com/jsref/obj_location.asp" target="_blank">Location object</a></li>
+  <li><a href="BrowserObjects.html" target="_blank">Document object<br>
+    </a></li>
+  <li><a href="https://www.w3schools.com/jsref/obj_history.asp" target="_blank">History object</a></li>
+  <li><a href="https://www.w3schools.com/jsref/obj_navigator.asp" target="_blank">Navigator object</a></li>
+</ul>
+<h4>Example</h4>
+<p><a href="BrowserObjects.html" target="_blank">Working Code for Browser Objects</a></p>
+<h3>&nbsp;</h3>
+<h3>2.2 HTML Objects</h3>
+<p>The HTML &lt;form&gt; element defines a form that is used to collect user input:</p>
+<p><strong>&lt;form&gt;<br>
+  .<br>
+  form elements<br>
+  .<br>
+&lt;/form&gt;</strong></p>
+<p>An HTML form contains form elements. Form elements are different types of input elements, like text fields, checkboxes, radio buttons, submit buttons, and more.</p>
+<p><strong>&lt;form name="myForm" action="/action_page_post.php" onsubmit="return validateForm()" method="post"&gt;<br>
+  Name: &lt;input type="text" name="fname"&gt;<br>
+  &lt;input type="submit" value="Submit"&gt;<br>
+&lt;/form&gt;</strong></p>
+<h4>Methods</h4>
+<table width="300">
+  <tbody>
+    <tr>
+      <th width="60" align="left">Method</th>
+      <th width="98" align="left">Description</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/met_form_reset.asp">reset()</a></td>
+      <td>Resets a form</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/met_form_submit.asp">submit()</a></td>
+      <td>Submits a form</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Properties</h4>
+<table width="700">
+  <tbody>
+    <tr>
+      <th width="129" align="left">Property</th>
+      <th width="551" align="left">Description</th>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/prop_form_acceptcharset.asp">acceptCharset</a></td>
+      <td>Sets or returns the value of the accept-charset attribute in a form</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/prop_form_action.asp">action</a></td>
+      <td>Sets or returns the value of the action attribute in a form</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/prop_form_autocomplete.asp">autocomplete</a></td>
+      <td>Sets or returns the value of the autocomplete attribute in a form</td>
+    </tr>
+    <tr>
+      <td>encoding</td>
+      <td>Alias of <a href="https://www.w3schools.com/jsref/prop_form_enctype.asp">enctype</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/prop_form_enctype.asp">enctype</a></td>
+      <td>Sets or returns the value of the enctype attribute in a form</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/prop_form_length.asp">length</a></td>
+      <td>Returns the number of elements in a form</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/prop_form_method.asp">method</a></td>
+      <td>Sets or returns the value of the method attribute in a form</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/prop_form_name.asp">name</a></td>
+      <td>Sets or returns the value of the name attribute in a form</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/prop_form_novalidate.asp">noValidate</a></td>
+      <td>Sets or returns whether the form-data should be validated or not, on submission</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.w3schools.com/jsref/prop_form_target.asp">target</a></td>
+      <td>Sets or returns the value of the target attribute in a form</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Example</h4>
+<p><a href="HTMLform.html" target="_blank">Working code for an HTML Form</a></p>
+<p>&nbsp;</p>
+<h3>2.3 Events</h3>
+<p>An HTML event can be something the browser does, or something a user does.<br>
+  HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.<br>
+The function that is called in response to an event is called an event handler.</p>
+<p>Event handlers can be used to handle, and verify, user input, user actions, and browser actions:</p>
+<ul>
+  <li>Things that should be done every time a page loads</li>
+  <li>Things that should be done when the page is closed</li>
+  <li>Action that should be performed when a user clicks a button</li>
+  <li>Content that should be verified when a user inputs data</li>
+</ul>
+<h4>General Syntax</h4>
+<p><strong><em>&lt;some-HTML-element some-event="some JavaScript"&gt;</em></strong></p>
+<p><strong>&lt;button onclick="displayDate()"&gt;The time is?&lt;/button&gt;</strong></p>
+<p>Here is a list of some common HTML events:</p>
+<table width="600">
+  <tbody>
+    <tr>
+      <th width="148">Event</th>
+      <th width="432">Description</th>
+    </tr>
+    <tr>
+      <td>onchange</td>
+      <td>An HTML element has been changed</td>
+    </tr>
+    <tr>
+      <td>onclick</td>
+      <td>The user clicks an HTML element</td>
+    </tr>
+    <tr>
+      <td>onmouseover</td>
+      <td>The user moves the mouse over an HTML element</td>
+    </tr>
+    <tr>
+      <td>onmouseout</td>
+      <td>The user moves the mouse away from an HTML element</td>
+    </tr>
+    <tr>
+      <td>onkeydown</td>
+      <td>The user pushes a keyboard key</td>
+    </tr>
+    <tr>
+      <td>onload</td>
+      <td>The browser has finished loading the page</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Example</h4>
+<p><a href="Events/Events.html" target="_blank">Working code for an Event</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
